@@ -1,105 +1,154 @@
-<div align="center">
 🌱 ShopImpact – Conscious Shopping Dashboard
-Designing Sustainable Habits Through Code
 
-🐢 Python • Streamlit • Data Visualization • Social Good
+ShopImpact is a web-based application developed using Python and Streamlit.
+The purpose of this project is to help users record their shopping expenses and understand the environmental (CO₂) impact of their purchasing decisions.
 
-</div>
-📌 Project Overview
+The application promotes responsible consumer behavior by combining data tracking, visual analytics, and an eco-scoring system.
 
-ShopImpact is an interactive Python + Streamlit web application designed to help users understand the environmental impact of their shopping habits.
-By logging purchases, users can instantly view their CO₂ footprint, track monthly spending, earn eco-badges, and receive greener alternatives.
+🔗 Live Application:
+https://shopimpact-eco.streamlit.app
 
-The app transforms sustainability from a hidden concept into a visible, engaging, and motivating experience.
+🎯 Project Objective
 
-🎓 Developed as part of the Summative Assessment for Python Programming (Artificial Intelligence).
+The objectives of this project are to:
 
-🎯 Project Objectives
+Record and organize user shopping data
 
-Promote conscious consumerism
+Estimate carbon emissions based on product categories
 
-Visualize the hidden environmental cost of purchases
+Encourage sustainable and environmentally responsible purchasing
 
-Encourage eco-friendly decision-making
+Present spending and environmental impact using clear visualizations
 
-Apply core Python programming concepts in a real-world scenario
+Develop a practical application using Python programming concepts
 
-Build and deploy a user-centric Streamlit web app
-
-🧠 Key Features
-✅ Compulsory Features (Assessment Aligned)
-
+✨ Key Features
 📝 Purchase Logging
+
+Users can log purchases by entering:
 
 Product Name
 
-Brand
+Brand (optional)
 
 Category
 
 Price (₹ INR)
 
-🌍 Real-Time CO₂ Impact Calculation
+Each purchase automatically calculates an estimated CO₂ footprint.
 
-CO₂ Impact = Price × Category Multiplier
+🌍 Eco Score System
 
+Generates a score between 0 and 100
 
-📊 Monthly Impact Dashboard
+Based on the ratio of CO₂ emissions to spending
 
-Monthly Total Spend (₹ INR)
+Provides immediate feedback on sustainability
 
-Monthly Total CO₂ Emissions (kg)
+Displayed using a progress bar for clarity
 
-🏆 Eco Badges & Achievements
+🌿 Eco-Friendly Feedback
 
-First Step
+Sustainable purchases trigger positive feedback
 
-Local Hero
+Higher-impact purchases display suggestions for greener alternatives
 
-Big Spender
+Encourages reflection and improvement rather than restriction
 
-Earth Guardian
+📊 Visual Insights
 
-🌿 Greener Alternative Suggestions
+Spending Distribution Chart
+Displays how spending is divided across categories
 
-Rule-based recommendations for high-impact purchases
+CO₂ Impact Chart
+Shows carbon emissions by category
 
-🐢 Turtle Graphics
+Interactive and color-coded for easy interpretation
 
-Eco-themed graphics drawn using Python’s turtle module
+📅 Monthly Impact Summary
 
-Triggered on eco-friendly purchase choices
+Summarizes total monthly spending
 
-(Rendering may be limited on cloud deployment due to headless environments, but logic is fully implemented)
+Displays total monthly CO₂ emissions
 
-🇮🇳 Indian Currency Localization
+Helps track progress over time
 
-All values displayed in ₹ INR
+🏆 Achievements & Progress
 
-🌟 Additional Enhancements
+Achievement indicators based on user activity
 
-🌱 Eco Score (0–100) with progress bar
+Eco Score progress bar
 
-🌳 Sidebar “Eco Habitat” status messages
+Motivates continued responsible behavior
 
-📈 Interactive charts:
+🛠 Technologies Used
+Technology	Purpose
+Python	Core programming language
+Streamlit	Web application framework
+Pandas	Data processing and analysis
+Plotly	Interactive data visualization
+📁 Project Structure
+ShopImpact/
+│
+├── app.py              # Main Streamlit application
+├── README.md           # Project documentation
+├── requirements.txt    # Python dependencies
 
-Spending Distribution
+🧪 Testing the Application
 
-CO₂ Impact by Category
+The application can be tested by entering sample purchases such as:
 
-🧾 Purchase history table
+Product: Organic Vegetables
+Category: Local Food
+Price: ₹300
 
-🎨 Clean, modern dashboard-style UI
+Product: T-Shirt
+Category: Eco-Friendly Fashion
+Price: ₹1,200
 
-🛠️ Technologies Used
+Product: Smartphone
+Category: Electronic Goods
+Price: ₹18,000
 
-Python
+The user can then observe:
 
-Streamlit
+Changes in Eco Score
 
-Pandas
+Real-time updates in charts
 
-Plotly
+Updates in the monthly summary table
 
-Turtle (Python Standard Library)
+🤖 Use of AI Tools (Academic Integrity Statement)
+
+During the development of this project, AI tools such as ChatGPT and Veo3 were used in a limited and supportive role for:
+
+Understanding Streamlit functionality and Python concepts
+
+Improving code structure and readability
+
+Refining UI design ideas
+
+Assisting with documentation clarity
+
+All program logic, design decisions, testing, and final implementation were understood, reviewed, and completed by the author.
+The project reflects the author’s own learning and application of programming concepts.
+
+📝 Additional Notes
+
+All prices are displayed in ₹ INR
+
+Data is stored only for the active session (no database used)
+
+The application is compatible with Streamlit Community Cloud
+
+No GUI-based libraries (such as tkinter or turtle) are used
+
+Developed for educational and academic purposes
+
+👤 Author
+
+Ankit
+
+🌿 Reflection
+
+This project demonstrates the use of Python programming to address a real-world issue by combining data handling, visualization, and user interaction. It reflects the application of computational thinking and responsible technology use in line with IB learner profile values.
