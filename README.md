@@ -183,6 +183,15 @@ This project demonstrates:
 # Stored in session state
 st.session_state.purchases = [purchase1, purchase2, ...]
 ```
+Screenshot
+<img width="1905" height="973" alt="image" src="https://github.com/user-attachments/assets/9fe006a4-7cca-40ef-a035-123b6d79a444" /> 
+<img width="1918" height="925" alt="image" src="https://github.com/user-attachments/assets/63f0cc17-ef28-4cd6-af7a-e9bc391755c3" />
+<img width="1918" height="920" alt="image" src="https://github.com/user-attachments/assets/34ebea7c-3d5b-43cd-9588-6db72abd01fc" />
+<img width="1918" height="912" alt="image" src="https://github.com/user-attachments/assets/3b6832df-9d95-4ea4-8293-3c63cf7f7d0d" />
+<img width="1918" height="925" alt="image" src="https://github.com/user-attachments/assets/2b30b727-f6c9-40ed-97a0-5cc37802a79f" />
+<img width="1918" height="926" alt="image" src="https://github.com/user-attachments/assets/49c1a256-3b57-4aae-9754-cf8d52bd8d5e" />
+<img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/d8be8aaf-4ef0-45dc-95f7-1f5f7832c67b" />
+
 
 ### Key Functions
 - `calculate_co2_impact()`: Computes emissions based on product and price
