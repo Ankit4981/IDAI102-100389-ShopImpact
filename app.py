@@ -1,5 +1,5 @@
 """
-ShopImpact - Conscious Shopping Dashboard (Colorful Enhanced Edition)
+ShopImpact - Conscious Shopping Dashboard (Modern Purple-Blue Edition)
 A beautiful, welcoming Streamlit app for tracking shopping and environmental impact
 """
 
@@ -20,39 +20,40 @@ except ImportError:
     GEMINI_AVAILABLE = False
 
 # ============================================================================
-# VIBRANT ECO-FRIENDLY COLOR PALETTE
+# MODERN PURPLE-BLUE COLOR PALETTE
 # ============================================================================
 
 COLORS = {
-    # Primary eco-greens
-    "forest_green": "#2d5a27",
-    "sage_green": "#8fbc8f",
-    "mint": "#98ff98",
-    "lime": "#b4d455",
+    # Primary purples
+    "deep_purple": "#6B46C1",
+    "royal_purple": "#805AD5",
+    "light_purple": "#B794F6",
+    "lavender": "#D6BCFA",
     
     # Blues
-    "sky_blue": "#87ceeb",
-    "ocean": "#4a90a4",
-    "teal": "#20b2aa",
-    "aqua": "#7fdbff",
+    "navy_blue": "#2C5282",
+    "ocean_blue": "#3182CE",
+    "sky_blue": "#63B3ED",
+    "light_blue": "#90CDF4",
     
-    # Earth tones
-    "sand": "#f4e8c1",
-    "terracotta": "#e07a5f",
-    "clay": "#c9ada7",
-    "cream": "#faf3e0",
-    "wheat": "#f5deb3",
+    # Teals & Cyans
+    "teal": "#319795",
+    "cyan": "#38B2AC",
+    "mint": "#81E6D9",
+    "aqua": "#B2F5EA",
     
     # Accents
-    "coral": "#ff6b6b",
-    "golden": "#ffd700",
-    "peach": "#ffb6b9",
-    "lavender": "#c8b8db",
+    "pink": "#ED64A6",
+    "coral": "#F687B3",
+    "orange": "#F6AD55",
+    "yellow": "#F6E05E",
     
     # Neutrals
-    "warm_white": "#fffef7",
-    "soft_gray": "#6c757d",
-    "charcoal": "#2c3333"
+    "off_white": "#F7FAFC",
+    "light_gray": "#E2E8F0",
+    "medium_gray": "#A0AEC0",
+    "dark_gray": "#2D3748",
+    "charcoal": "#1A202C"
 }
 
 # Impact multipliers
@@ -71,16 +72,16 @@ IMPACT_MULTIPLIERS = {
 
 # Category colors
 CATEGORY_COLORS = {
-    "Electronics": COLORS["ocean"],
-    "Clothes": COLORS["peach"],
-    "Groceries": COLORS["lime"],
-    "Home & Furniture": COLORS["clay"],
-    "Beauty & Personal Care": COLORS["lavender"],
-    "Books & Stationery": COLORS["wheat"],
-    "Toys & Games": COLORS["coral"],
-    "Sports & Outdoor": COLORS["teal"],
-    "Second-hand": COLORS["sage_green"],
-    "Other": COLORS["soft_gray"]
+    "Electronics": COLORS["ocean_blue"],
+    "Clothes": COLORS["pink"],
+    "Groceries": COLORS["teal"],
+    "Home & Furniture": COLORS["orange"],
+    "Beauty & Personal Care": COLORS["coral"],
+    "Books & Stationery": COLORS["light_purple"],
+    "Toys & Games": COLORS["yellow"],
+    "Sports & Outdoor": COLORS["cyan"],
+    "Second-hand": COLORS["mint"],
+    "Other": COLORS["medium_gray"]
 }
 
 ECO_ALTERNATIVES = {
@@ -221,13 +222,13 @@ def show_login_page():
                             animation: bounce 2s ease-in-out infinite;'>
                     🌍🌿
                 </div>
-                <h1 style='font-family: "Fredoka", cursive; font-size: 4rem; 
-                           background: linear-gradient(135deg, {COLORS['forest_green']}, {COLORS['teal']}, {COLORS['ocean']});
+                <h1 style='font-family: "Poppins", sans-serif; font-size: 4rem; font-weight: 800;
+                           background: linear-gradient(135deg, {COLORS['deep_purple']}, {COLORS['ocean_blue']}, {COLORS['teal']});
                            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
                            margin: 0; line-height: 1.2;'>
                     ShopImpact
                 </h1>
-                <p style='font-size: 1.5rem; color: {COLORS['soft_gray']}; margin-top: 10px; font-weight: 600;'>
+                <p style='font-size: 1.5rem; color: {COLORS['medium_gray']}; margin-top: 10px; font-weight: 600;'>
                     Conscious Shopping Journey
                 </p>
             </div>
@@ -243,8 +244,8 @@ def show_login_page():
         # Login card
         st.markdown(f"""
             <div style='background: white; padding: 50px 40px; border-radius: 35px; 
-                        box-shadow: 0 20px 60px rgba(0,0,0,0.15); 
-                        border: 6px solid {COLORS['sage_green']};'>
+                        box-shadow: 0 20px 60px rgba(107, 70, 193, 0.2); 
+                        border: 6px solid {COLORS['light_purple']};'>
         """, unsafe_allow_html=True)
         
         # Toggle between login and signup
@@ -255,11 +256,11 @@ def show_login_page():
             # LOGIN FORM
             st.markdown(f"""
                 <div style='text-align: center; margin-bottom: 30px;'>
-                    <h2 style='color: {COLORS['forest_green']}; font-family: "Fredoka", cursive; 
-                               font-size: 2.5rem; margin: 0;'>
+                    <h2 style='color: {COLORS['deep_purple']}; font-family: "Poppins", sans-serif; 
+                               font-size: 2.5rem; margin: 0; font-weight: 700;'>
                         Welcome Back! 👋
                     </h2>
-                    <p style='color: {COLORS['soft_gray']}; font-size: 1.1rem; margin-top: 10px;'>
+                    <p style='color: {COLORS['medium_gray']}; font-size: 1.1rem; margin-top: 10px;'>
                         Sign in to continue your eco journey
                     </p>
                 </div>
@@ -306,10 +307,10 @@ def show_login_page():
             
             # Demo credentials info
             st.markdown(f"""
-                <div style='background: linear-gradient(135deg, {COLORS['aqua']}20, {COLORS['sky_blue']}10); 
+                <div style='background: linear-gradient(135deg, {COLORS['light_blue']}30, {COLORS['aqua']}20); 
                             padding: 20px; border-radius: 15px; margin-top: 25px; 
-                            border: 2px dashed {COLORS['ocean']};'>
-                    <p style='margin: 0; font-size: 0.95rem; color: {COLORS['ocean']}; font-weight: 600; text-align: center;'>
+                            border: 2px dashed {COLORS['ocean_blue']};'>
+                    <p style='margin: 0; font-size: 0.95rem; color: {COLORS['ocean_blue']}; font-weight: 600; text-align: center;'>
                         🎯 <strong>Demo Credentials:</strong><br>
                         Username: <code>demo_user</code> | Password: <code>demo123</code><br>
                         Username: <code>eco_warrior</code> | Password: <code>green123</code>
@@ -321,11 +322,11 @@ def show_login_page():
             # SIGNUP FORM
             st.markdown(f"""
                 <div style='text-align: center; margin-bottom: 30px;'>
-                    <h2 style='color: {COLORS['forest_green']}; font-family: "Fredoka", cursive; 
-                               font-size: 2.5rem; margin: 0;'>
+                    <h2 style='color: {COLORS['deep_purple']}; font-family: "Poppins", sans-serif; 
+                               font-size: 2.5rem; margin: 0; font-weight: 700;'>
                         Join ShopImpact! 🌱
                     </h2>
-                    <p style='color: {COLORS['soft_gray']}; font-size: 1.1rem; margin-top: 10px;'>
+                    <p style='color: {COLORS['medium_gray']}; font-size: 1.1rem; margin-top: 10px;'>
                         Start your sustainable shopping journey today
                     </p>
                 </div>
@@ -404,12 +405,12 @@ def show_login_page():
         st.markdown("<br>", unsafe_allow_html=True)
         st.markdown(f"""
             <div style='text-align: center; padding: 30px; 
-                        background: linear-gradient(135deg, {COLORS['sage_green']}20, {COLORS['teal']}20);
+                        background: linear-gradient(135deg, {COLORS['lavender']}, {COLORS['aqua']});
                         border-radius: 25px; margin-top: 40px;'>
-                <p style='color: {COLORS['forest_green']}; font-size: 1.1rem; margin: 0; font-weight: 600;'>
+                <p style='color: {COLORS['deep_purple']}; font-size: 1.1rem; margin: 0; font-weight: 600;'>
                     🌍 Join thousands of eco-conscious shoppers
                 </p>
-                <p style='color: {COLORS['soft_gray']}; font-size: 0.95rem; margin-top: 10px;'>
+                <p style='color: {COLORS['dark_gray']}; font-size: 0.95rem; margin-top: 10px;'>
                     Track purchases • Reduce impact • Earn rewards
                 </p>
             </div>
@@ -425,29 +426,29 @@ def create_colorful_reward(reward_type):
     
     configs = {
         "leaf": {
-            "color": COLORS["sage_green"],
+            "color": COLORS["teal"],
             "bg": COLORS["mint"],
             "icon": "🌿",
             "title": "Eco Champion!",
             "message": "Green choice unlocked!"
         },
         "trophy": {
-            "color": COLORS["golden"],
-            "bg": COLORS["wheat"],
+            "color": COLORS["orange"],
+            "bg": COLORS["yellow"],
             "icon": "🏆",
             "title": "Low Impact Hero!",
             "message": "Under 1kg CO₂!"
         },
         "footprint": {
-            "color": COLORS["ocean"],
-            "bg": COLORS["sky_blue"],
+            "color": COLORS["ocean_blue"],
+            "bg": COLORS["light_blue"],
             "icon": "👣",
             "title": "Impact Tracker!",
             "message": "Monitoring your footprint!"
         },
         "recycle": {
-            "color": COLORS["forest_green"],
-            "bg": COLORS["lime"],
+            "color": COLORS["cyan"],
+            "bg": COLORS["aqua"],
             "icon": "♻️",
             "title": "Recycler Hero!",
             "message": "Second-hand superstar!"
@@ -468,7 +469,7 @@ def create_colorful_reward(reward_type):
                 justify-content: center;
                 align-items: center;
                 background: transparent;
-                font-family: 'Segoe UI', system-ui, sans-serif;
+                font-family: 'Poppins', sans-serif;
             }}
             .reward-box {{
                 background: linear-gradient(135deg, {cfg['bg']}40, {cfg['color']}20);
@@ -505,7 +506,7 @@ def create_colorful_reward(reward_type):
                 margin: 8px 0;
             }}
             .label {{
-                color: {COLORS['soft_gray']};
+                color: {COLORS['medium_gray']};
                 font-size: 11px;
                 text-transform: uppercase;
                 letter-spacing: 3px;
@@ -636,12 +637,12 @@ def calculate_eco_score(total_impact, num_purchases):
 
 def check_badges():
     badges = {
-        "beginner": {"earned": False, "icon": "🌱", "color": COLORS["lime"], "title": "Beginner", "desc": "First purchase!"},
-        "eco_saver": {"earned": False, "icon": "🌊", "color": COLORS["sky_blue"], "title": "Eco Saver", "desc": "Under 20kg CO₂"},
-        "recycler": {"earned": False, "icon": "♻️", "color": COLORS["sage_green"], "title": "Recycler", "desc": "Bought second-hand"},
-        "savvy": {"earned": False, "icon": "💎", "color": COLORS["aqua"], "title": "Savvy", "desc": "5+ purchases"},
-        "champion": {"earned": False, "icon": "🏆", "color": COLORS["golden"], "title": "Champion", "desc": "10+ purchases"},
-        "warrior": {"earned": False, "icon": "🌟", "color": COLORS["coral"], "title": "Warrior", "desc": "Under 10kg total"}
+        "beginner": {"earned": False, "icon": "🌱", "color": COLORS["mint"], "title": "Beginner", "desc": "First purchase!"},
+        "eco_saver": {"earned": False, "icon": "🌊", "color": COLORS["light_blue"], "title": "Eco Saver", "desc": "Under 20kg CO₂"},
+        "recycler": {"earned": False, "icon": "♻️", "color": COLORS["teal"], "title": "Recycler", "desc": "Bought second-hand"},
+        "savvy": {"earned": False, "icon": "💎", "color": COLORS["cyan"], "title": "Savvy", "desc": "5+ purchases"},
+        "champion": {"earned": False, "icon": "🏆", "color": COLORS["orange"], "title": "Champion", "desc": "10+ purchases"},
+        "warrior": {"earned": False, "icon": "🌟", "color": COLORS["pink"], "title": "Warrior", "desc": "Under 10kg total"}
     }
     
     if not st.session_state.purchases:
@@ -683,26 +684,26 @@ if not st.session_state.logged_in:
     st.stop()  # Stop execution here if not logged in
 
 # ============================================================================
-# COLORFUL CUSTOM STYLING
+# MODERN CUSTOM STYLING
 # ============================================================================
 
 st.markdown(f"""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Fredoka:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
     
     /* Global styling */
     .stApp {{
-        background: linear-gradient(135deg, {COLORS['cream']} 0%, {COLORS['sand']} 50%, {COLORS['wheat']} 100%);
+        background: linear-gradient(135deg, {COLORS['off_white']} 0%, {COLORS['light_gray']} 50%, {COLORS['lavender']}10 100%);
         font-family: 'Poppins', sans-serif;
     }}
     
     /* Headers */
     .mega-header {{
-        font-family: 'Fredoka', cursive;
+        font-family: 'Poppins', sans-serif;
         font-size: 5rem;
-        font-weight: 700;
+        font-weight: 900;
         text-align: center;
-        background: linear-gradient(135deg, {COLORS['forest_green']}, {COLORS['teal']}, {COLORS['ocean']});
+        background: linear-gradient(135deg, {COLORS['deep_purple']}, {COLORS['ocean_blue']}, {COLORS['teal']});
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -714,7 +715,7 @@ st.markdown(f"""
     .subtitle {{
         text-align: center;
         font-size: 1.5rem;
-        color: {COLORS['soft_gray']};
+        color: {COLORS['medium_gray']};
         font-weight: 600;
         margin-bottom: 40px;
     }}
@@ -725,7 +726,7 @@ st.markdown(f"""
         padding: 35px 25px;
         border-radius: 30px;
         text-align: center;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        box-shadow: 0 15px 35px rgba(107, 70, 193, 0.15);
         border: 5px solid;
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         position: relative;
@@ -746,7 +747,7 @@ st.markdown(f"""
     
     .metric-card:hover {{
         transform: translateY(-12px) scale(1.03);
-        box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        box-shadow: 0 25px 50px rgba(107, 70, 193, 0.25);
     }}
     
     .metric-card:hover::before {{
@@ -783,15 +784,15 @@ st.markdown(f"""
     
     /* Section headers */
     .section-header {{
-        font-family: 'Fredoka', cursive;
+        font-family: 'Poppins', sans-serif;
         font-size: 2.5rem;
-        font-weight: 700;
+        font-weight: 800;
         margin: 50px 0 30px 0;
         padding: 20px 30px;
-        background: linear-gradient(135deg, {COLORS['sage_green']}30, {COLORS['sky_blue']}30);
-        border-left: 8px solid {COLORS['teal']};
+        background: linear-gradient(135deg, {COLORS['lavender']}, {COLORS['light_blue']});
+        border-left: 8px solid {COLORS['royal_purple']};
         border-radius: 20px;
-        color: {COLORS['forest_green']};
+        color: {COLORS['deep_purple']};
     }}
     
     /* Colorful cards */
@@ -799,14 +800,14 @@ st.markdown(f"""
         background: white;
         padding: 35px;
         border-radius: 25px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 30px rgba(107, 70, 193, 0.12);
         margin: 20px 0;
         border-top: 6px solid;
         transition: all 0.3s ease;
     }}
     
     .color-card:hover {{
-        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        box-shadow: 0 15px 40px rgba(107, 70, 193, 0.2);
         transform: translateY(-5px);
     }}
     
@@ -828,14 +829,14 @@ st.markdown(f"""
     }}
     
     .badge-unlocked {{
-        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        box-shadow: 0 15px 40px rgba(107, 70, 193, 0.25);
         animation: badgePulse 2s ease-in-out infinite;
     }}
     
     .badge-locked {{
         opacity: 0.35;
         filter: grayscale(100%);
-        border-color: {COLORS['soft_gray']}40;
+        border-color: {COLORS['medium_gray']}40;
     }}
     
     @keyframes badgePulse {{
@@ -863,37 +864,37 @@ st.markdown(f"""
     
     /* Buttons */
     .stButton>button {{
-        background: linear-gradient(135deg, {COLORS['forest_green']}, {COLORS['teal']});
+        background: linear-gradient(135deg, {COLORS['deep_purple']}, {COLORS['royal_purple']});
         color: white;
         font-weight: 700;
         font-size: 1.1rem;
         padding: 18px 35px;
         border-radius: 50px;
         border: none;
-        box-shadow: 0 8px 20px rgba(45, 90, 39, 0.3);
+        box-shadow: 0 8px 20px rgba(107, 70, 193, 0.3);
         transition: all 0.3s ease;
         text-transform: uppercase;
         letter-spacing: 1px;
     }}
     
     .stButton>button:hover {{
-        background: linear-gradient(135deg, {COLORS['teal']}, {COLORS['ocean']});
+        background: linear-gradient(135deg, {COLORS['royal_purple']}, {COLORS['ocean_blue']});
         transform: translateY(-3px);
-        box-shadow: 0 12px 30px rgba(45, 90, 39, 0.4);
+        box-shadow: 0 12px 30px rgba(107, 70, 193, 0.4);
     }}
     
     /* Form inputs */
     .stTextInput input, .stNumberInput input, .stSelectbox, .stDateInput input {{
         border-radius: 15px;
-        border: 3px solid {COLORS['sage_green']}40;
+        border: 3px solid {COLORS['lavender']};
         padding: 15px;
         font-size: 1.05rem;
         transition: all 0.3s;
     }}
     
     .stTextInput input:focus, .stNumberInput input:focus {{
-        border-color: {COLORS['teal']};
-        box-shadow: 0 0 0 4px {COLORS['teal']}20;
+        border-color: {COLORS['royal_purple']};
+        box-shadow: 0 0 0 4px {COLORS['lavender']}40;
     }}
     
     /* Info boxes */
@@ -912,21 +913,21 @@ st.markdown(f"""
         width: 12px;
     }}
     ::-webkit-scrollbar-track {{
-        background: {COLORS['wheat']};
+        background: {COLORS['light_gray']};
     }}
     ::-webkit-scrollbar-thumb {{
-        background: linear-gradient(135deg, {COLORS['sage_green']}, {COLORS['teal']});
+        background: linear-gradient(135deg, {COLORS['royal_purple']}, {COLORS['teal']});
         border-radius: 10px;
     }}
     
     /* Welcome card */
     .welcome-card {{
-        background: linear-gradient(135deg, white, {COLORS['cream']});
+        background: linear-gradient(135deg, white, {COLORS['off_white']});
         padding: 60px 40px;
         border-radius: 35px;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        box-shadow: 0 20px 60px rgba(107, 70, 193, 0.15);
         text-align: center;
-        border: 6px solid {COLORS['sage_green']};
+        border: 6px solid {COLORS['light_purple']};
     }}
     
     .feature-grid {{
@@ -940,14 +941,14 @@ st.markdown(f"""
         background: white;
         padding: 30px;
         border-radius: 20px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        box-shadow: 0 8px 20px rgba(107, 70, 193, 0.1);
         transition: all 0.3s ease;
         border-top: 5px solid;
     }}
     
     .feature-item:hover {{
         transform: translateY(-8px);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        box-shadow: 0 15px 35px rgba(107, 70, 193, 0.2);
     }}
 </style>
 """, unsafe_allow_html=True)
@@ -959,7 +960,7 @@ st.markdown(f"""
 with st.sidebar:
     # User profile section
     st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {COLORS['sage_green']}, {COLORS['teal']}); 
+        <div style='background: linear-gradient(135deg, {COLORS['deep_purple']}, {COLORS['ocean_blue']}); 
                     padding: 25px 20px; border-radius: 25px; margin-bottom: 20px; text-align: center;'>
             <div style='font-size: 3.5rem; margin-bottom: 10px;'>👤</div>
             <h3 style='color: white; margin: 0; font-size: 1.3rem; font-weight: 700;'>
@@ -984,10 +985,10 @@ with st.sidebar:
     st.markdown("---")
     
     st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {COLORS['sage_green']}, {COLORS['teal']}); 
+        <div style='background: linear-gradient(135deg, {COLORS['royal_purple']}, {COLORS['teal']}); 
                     padding: 30px 20px; border-radius: 25px; margin-bottom: 25px; text-align: center;'>
             <div style='font-size: 3.5rem; margin-bottom: 10px;'>🌿</div>
-            <h2 style='color: white; margin: 0; font-family: "Fredoka", cursive; font-size: 2rem;'>
+            <h2 style='color: white; margin: 0; font-family: "Poppins", sans-serif; font-size: 2rem; font-weight: 800;'>
                 Log Purchase
             </h2>
             <p style='color: white; opacity: 0.9; margin: 8px 0 0 0; font-size: 0.95rem;'>
@@ -1080,9 +1081,9 @@ with st.sidebar:
     if st.session_state.purchases:
         st.markdown("---")
         st.markdown(f"""
-            <div style='background: linear-gradient(135deg, {COLORS['aqua']}40, {COLORS['sky_blue']}40); 
-                        padding: 20px; border-radius: 20px; border: 3px solid {COLORS['aqua']};'>
-                <h3 style='color: {COLORS['ocean']}; margin: 0 0 15px 0; font-size: 1.3rem;'>
+            <div style='background: linear-gradient(135deg, {COLORS['light_blue']}50, {COLORS['aqua']}40); 
+                        padding: 20px; border-radius: 20px; border: 3px solid {COLORS['cyan']};'>
+                <h3 style='color: {COLORS['ocean_blue']}; margin: 0 0 15px 0; font-size: 1.3rem;'>
                     📊 Quick Stats
                 </h3>
         """, unsafe_allow_html=True)
@@ -1106,13 +1107,13 @@ with st.sidebar:
 
 # Welcome message with username
 st.markdown(f"""
-    <div style='background: linear-gradient(135deg, {COLORS['lime']}30, {COLORS['sage_green']}20); 
+    <div style='background: linear-gradient(135deg, {COLORS['lavender']}, {COLORS['light_blue']}30); 
                 padding: 20px 30px; border-radius: 20px; margin-bottom: 30px; 
-                border-left: 6px solid {COLORS['forest_green']};'>
-        <p style='margin: 0; font-size: 1.2rem; color: {COLORS['forest_green']}; font-weight: 600;'>
+                border-left: 6px solid {COLORS['deep_purple']};'>
+        <p style='margin: 0; font-size: 1.2rem; color: {COLORS['deep_purple']}; font-weight: 600;'>
             Welcome back, <strong>{st.session_state.user_data[st.session_state.username]['name']}</strong>! 👋
         </p>
-        <p style='margin: 5px 0 0 0; font-size: 1rem; color: {COLORS['soft_gray']};'>
+        <p style='margin: 5px 0 0 0; font-size: 1rem; color: {COLORS['dark_gray']};'>
             Keep making sustainable choices for a better tomorrow 🌍
         </p>
     </div>
@@ -1141,26 +1142,26 @@ col1, col2, col3, col4 = st.columns(4, gap="large")
 
 with col1:
     st.markdown(f"""
-        <div class='metric-card' style='border-color: {COLORS['coral']};'>
+        <div class='metric-card' style='border-color: {COLORS['pink']};'>
             <span class='metric-icon'>🌡️</span>
-            <div class='metric-label' style='color: {COLORS['coral']};'>Carbon Footprint</div>
-            <div class='metric-value' style='color: {COLORS['coral']};'>{total_impact:.1f}</div>
+            <div class='metric-label' style='color: {COLORS['pink']};'>Carbon Footprint</div>
+            <div class='metric-value' style='color: {COLORS['pink']};'>{total_impact:.1f}</div>
             <div class='metric-unit'>kg CO₂</div>
         </div>
     """, unsafe_allow_html=True)
 
 with col2:
     st.markdown(f"""
-        <div class='metric-card' style='border-color: {COLORS['terracotta']};'>
+        <div class='metric-card' style='border-color: {COLORS['orange']};'>
             <span class='metric-icon'>💰</span>
-            <div class='metric-label' style='color: {COLORS['terracotta']};'>Total Spending</div>
-            <div class='metric-value' style='color: {COLORS['terracotta']};'>₹{total_spend:,.0f}</div>
+            <div class='metric-label' style='color: {COLORS['orange']};'>Total Spending</div>
+            <div class='metric-value' style='color: {COLORS['orange']};'>₹{total_spend:,.0f}</div>
             <div class='metric-unit'>Indian Rupees</div>
         </div>
     """, unsafe_allow_html=True)
 
 with col3:
-    score_color = COLORS['lime'] if eco_score >= 70 else (COLORS['golden'] if eco_score >= 40 else COLORS['coral'])
+    score_color = COLORS['teal'] if eco_score >= 70 else (COLORS['orange'] if eco_score >= 40 else COLORS['pink'])
     st.markdown(f"""
         <div class='metric-card' style='border-color: {score_color};'>
             <span class='metric-icon'>⭐</span>
@@ -1172,10 +1173,10 @@ with col3:
 
 with col4:
     st.markdown(f"""
-        <div class='metric-card' style='border-color: {COLORS['ocean']};'>
+        <div class='metric-card' style='border-color: {COLORS['ocean_blue']};'>
             <span class='metric-icon'>📊</span>
-            <div class='metric-label' style='color: {COLORS['ocean']};'>Avg Impact</div>
-            <div class='metric-value' style='color: {COLORS['ocean']};'>{avg_impact:.2f}</div>
+            <div class='metric-label' style='color: {COLORS['ocean_blue']};'>Avg Impact</div>
+            <div class='metric-value' style='color: {COLORS['ocean_blue']};'>{avg_impact:.2f}</div>
             <div class='metric-unit'>kg/purchase</div>
         </div>
     """, unsafe_allow_html=True)
@@ -1191,61 +1192,61 @@ if not st.session_state.purchases:
     st.markdown(f"""
     <div class='welcome-card'>
         <div style='font-size: 6rem; margin-bottom: 25px;'>🌿✨</div>
-        <h2 style='font-family: "Fredoka", cursive; font-size: 3rem; 
-                   color: {COLORS['forest_green']}; margin-bottom: 20px;'>
+        <h2 style='font-family: "Poppins", sans-serif; font-size: 3rem; font-weight: 800;
+                   color: {COLORS['deep_purple']}; margin-bottom: 20px;'>
             Welcome to Your Eco Journey!
         </h2>
-        <p style='font-size: 1.4rem; color: {COLORS['soft_gray']}; 
+        <p style='font-size: 1.4rem; color: {COLORS['medium_gray']}; 
                   margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto;'>
             Every purchase tells a story. Let's make yours a green one! 🌍💚
         </p>
         
         <div class='feature-grid'>
-            <div class='feature-item' style='border-color: {COLORS['sage_green']};'>
+            <div class='feature-item' style='border-color: {COLORS['teal']};'>
                 <div style='font-size: 4rem; margin-bottom: 20px;'>📊</div>
-                <h4 style='color: {COLORS['forest_green']}; font-size: 1.3rem; margin: 15px 0;'>
+                <h4 style='color: {COLORS['teal']}; font-size: 1.3rem; margin: 15px 0;'>
                     Track Everything
                 </h4>
-                <p style='color: {COLORS['soft_gray']}; font-size: 1rem; line-height: 1.6;'>
+                <p style='color: {COLORS['medium_gray']}; font-size: 1rem; line-height: 1.6;'>
                     Monitor spending, carbon footprint, and shopping patterns
                 </p>
             </div>
             
-            <div class='feature-item' style='border-color: {COLORS['sky_blue']};'>
+            <div class='feature-item' style='border-color: {COLORS['ocean_blue']};'>
                 <div style='font-size: 4rem; margin-bottom: 20px;'>🤖</div>
-                <h4 style='color: {COLORS['ocean']}; font-size: 1.3rem; margin: 15px 0;'>
+                <h4 style='color: {COLORS['ocean_blue']}; font-size: 1.3rem; margin: 15px 0;'>
                     AI Insights
                 </h4>
-                <p style='color: {COLORS['soft_gray']}; font-size: 1rem; line-height: 1.6;'>
+                <p style='color: {COLORS['medium_gray']}; font-size: 1rem; line-height: 1.6;'>
                     Get personalized sustainability tips powered by AI
                 </p>
             </div>
             
-            <div class='feature-item' style='border-color: {COLORS['golden']};'>
+            <div class='feature-item' style='border-color: {COLORS['orange']};'>
                 <div style='font-size: 4rem; margin-bottom: 20px;'>🏆</div>
-                <h4 style='color: {COLORS['terracotta']}; font-size: 1.3rem; margin: 15px 0;'>
+                <h4 style='color: {COLORS['orange']}; font-size: 1.3rem; margin: 15px 0;'>
                     Earn Rewards
                 </h4>
-                <p style='color: {COLORS['soft_gray']}; font-size: 1rem; line-height: 1.6;'>
+                <p style='color: {COLORS['medium_gray']}; font-size: 1rem; line-height: 1.6;'>
                     Unlock animated badges for eco-friendly achievements
                 </p>
             </div>
             
-            <div class='feature-item' style='border-color: {COLORS['lime']};'>
+            <div class='feature-item' style='border-color: {COLORS['cyan']};'>
                 <div style='font-size: 4rem; margin-bottom: 20px;'>💡</div>
-                <h4 style='color: {COLORS['forest_green']}; font-size: 1.3rem; margin: 15px 0;'>
+                <h4 style='color: {COLORS['cyan']}; font-size: 1.3rem; margin: 15px 0;'>
                     Go Greener
                 </h4>
-                <p style='color: {COLORS['soft_gray']}; font-size: 1rem; line-height: 1.6;'>
+                <p style='color: {COLORS['medium_gray']}; font-size: 1rem; line-height: 1.6;'>
                     Discover sustainable alternatives for every purchase
                 </p>
             </div>
         </div>
         
         <div style='margin-top: 50px; padding: 30px; 
-                    background: linear-gradient(135deg, {COLORS['lime']}30, {COLORS['sage_green']}30); 
-                    border-radius: 20px; border: 3px dashed {COLORS['forest_green']};'>
-            <p style='margin: 0; font-size: 1.4rem; color: {COLORS['forest_green']}; font-weight: 700;'>
+                    background: linear-gradient(135deg, {COLORS['lavender']}, {COLORS['aqua']}); 
+                    border-radius: 20px; border: 3px dashed {COLORS['royal_purple']};'>
+            <p style='margin: 0; font-size: 1.4rem; color: {COLORS['deep_purple']}; font-weight: 700;'>
                 👈 Start by logging your first purchase in the sidebar!
             </p>
         </div>
@@ -1262,8 +1263,8 @@ else:
     chart_col1, chart_col2 = st.columns(2, gap="large")
     
     with chart_col1:
-        st.markdown(f"<div class='color-card' style='border-color: {COLORS['teal']};'>", unsafe_allow_html=True)
-        st.markdown(f"<h3 style='color: {COLORS['ocean']}; font-size: 1.8rem; margin-bottom: 25px;'>📊 Impact by Category</h3>", 
+        st.markdown(f"<div class='color-card' style='border-color: {COLORS['ocean_blue']};'>", unsafe_allow_html=True)
+        st.markdown(f"<h3 style='color: {COLORS['ocean_blue']}; font-size: 1.8rem; margin-bottom: 25px;'>📊 Impact by Category</h3>", 
                    unsafe_allow_html=True)
         
         cat_data = df.groupby("Category")["Impact"].sum().reset_index()
@@ -1293,8 +1294,8 @@ else:
         st.markdown("</div>", unsafe_allow_html=True)
     
     with chart_col2:
-        st.markdown(f"<div class='color-card' style='border-color: {COLORS['sage_green']};'>", unsafe_allow_html=True)
-        st.markdown(f"<h3 style='color: {COLORS['forest_green']}; font-size: 1.8rem; margin-bottom: 25px;'>🥧 Distribution Breakdown</h3>", 
+        st.markdown(f"<div class='color-card' style='border-color: {COLORS['royal_purple']};'>", unsafe_allow_html=True)
+        st.markdown(f"<h3 style='color: {COLORS['deep_purple']}; font-size: 1.8rem; margin-bottom: 25px;'>🥧 Distribution Breakdown</h3>", 
                    unsafe_allow_html=True)
         
         fig2 = px.pie(
@@ -1331,16 +1332,16 @@ else:
     insights_col, tips_col = st.columns([3, 2], gap="large")
     
     with insights_col:
-        st.markdown(f"<div class='color-card' style='border-color: {COLORS['teal']};'>", unsafe_allow_html=True)
+        st.markdown(f"<div class='color-card' style='border-color: {COLORS['cyan']};'>", unsafe_allow_html=True)
         
         if st.session_state.latest_tip:
             tip = st.session_state.latest_tip
             
             st.markdown(f"""
-                <div class='insight-box' style='background: linear-gradient(135deg, {COLORS['aqua']}25, {COLORS['sky_blue']}15); 
-                            border-color: {COLORS['ocean']};'>
+                <div class='insight-box' style='background: linear-gradient(135deg, {COLORS['light_blue']}30, {COLORS['aqua']}20); 
+                            border-color: {COLORS['ocean_blue']};'>
                     <div style='font-size: 2.5rem; margin-bottom: 15px;'>🔍</div>
-                    <div style='font-weight: 700; color: {COLORS['ocean']}; font-size: 1.1rem; 
+                    <div style='font-weight: 700; color: {COLORS['ocean_blue']}; font-size: 1.1rem; 
                                 text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px;'>
                         Impact Insight
                     </div>
@@ -1351,10 +1352,10 @@ else:
             """, unsafe_allow_html=True)
             
             st.markdown(f"""
-                <div class='insight-box' style='background: linear-gradient(135deg, {COLORS['lime']}25, {COLORS['sage_green']}15); 
-                            border-color: {COLORS['forest_green']};'>
+                <div class='insight-box' style='background: linear-gradient(135deg, {COLORS['mint']}30, {COLORS['aqua']}20); 
+                            border-color: {COLORS['teal']};'>
                     <div style='font-size: 2.5rem; margin-bottom: 15px;'>💡</div>
-                    <div style='font-weight: 700; color: {COLORS['forest_green']}; font-size: 1.1rem; 
+                    <div style='font-weight: 700; color: {COLORS['teal']}; font-size: 1.1rem; 
                                 text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px;'>
                         Green Alternative
                     </div>
@@ -1365,11 +1366,11 @@ else:
             """, unsafe_allow_html=True)
         else:
             st.markdown(f"""
-                <div style='background: linear-gradient(135deg, {COLORS['wheat']}, {COLORS['sand']}); 
+                <div style='background: linear-gradient(135deg, {COLORS['lavender']}, {COLORS['light_blue']}30); 
                             padding: 40px; border-radius: 20px; text-align: center; 
-                            border: 4px dashed {COLORS['terracotta']};'>
+                            border: 4px dashed {COLORS['royal_purple']};'>
                     <div style='font-size: 4rem; margin-bottom: 15px;'>🤖</div>
-                    <p style='font-size: 1.3rem; color: {COLORS['charcoal']}; font-weight: 600;'>
+                    <p style='font-size: 1.3rem; color: {COLORS['deep_purple']}; font-weight: 600;'>
                         Log a purchase to unlock AI-powered insights!
                     </p>
                 </div>
@@ -1378,16 +1379,16 @@ else:
         st.markdown("</div>", unsafe_allow_html=True)
     
     with tips_col:
-        st.markdown(f"<div class='color-card' style='border-color: {COLORS['peach']};'>", unsafe_allow_html=True)
+        st.markdown(f"<div class='color-card' style='border-color: {COLORS['pink']};'>", unsafe_allow_html=True)
         
         # Rotating eco tip
         tip_idx = len(st.session_state.purchases) % len(ECO_TIPS)
         st.markdown(f"""
-            <div style='background: linear-gradient(135deg, {COLORS['peach']}30, {COLORS['coral']}20); 
+            <div style='background: linear-gradient(135deg, {COLORS['coral']}30, {COLORS['pink']}20); 
                         padding: 30px; border-radius: 20px; text-align: center;
-                        border: 4px solid {COLORS['terracotta']};'>
+                        border: 4px solid {COLORS['pink']};'>
                 <div style='font-size: 3rem; margin-bottom: 15px;'>💚</div>
-                <div style='font-weight: 700; color: {COLORS['terracotta']}; font-size: 1rem; 
+                <div style='font-weight: 700; color: {COLORS['pink']}; font-size: 1rem; 
                             text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;'>
                     Eco Tip #{tip_idx + 1}
                 </div>
@@ -1413,7 +1414,7 @@ else:
         with badge_cols[idx % 3]:
             status = "badge-unlocked" if badge["earned"] else "badge-locked"
             icon = badge["icon"] if badge["earned"] else "🔒"
-            border_color = badge["color"] if badge["earned"] else COLORS['soft_gray']
+            border_color = badge["color"] if badge["earned"] else COLORS['medium_gray']
             
             st.markdown(f"""
                 <div class='badge-container {status}' style='border-color: {border_color};'>
@@ -1431,7 +1432,7 @@ else:
     
     st.markdown(f"<h2 class='section-header'>📋 Shopping Log & Impact Audit</h2>", unsafe_allow_html=True)
     
-    st.markdown(f"<div class='color-card' style='border-color: {COLORS['lavender']};'>", unsafe_allow_html=True)
+    st.markdown(f"<div class='color-card' style='border-color: {COLORS['light_purple']};'>", unsafe_allow_html=True)
     
     # Display dataframe
     display_df = df.sort_values("Date", ascending=False).copy()
@@ -1489,7 +1490,7 @@ else:
     
     for idx, (cat, count) in enumerate(top_categories.items()):
         with alt_cols[idx]:
-            cat_color = CATEGORY_COLORS.get(cat, COLORS['soft_gray'])
+            cat_color = CATEGORY_COLORS.get(cat, COLORS['medium_gray'])
             st.markdown(f"""
                 <div class='color-card' style='border-color: {cat_color}; min-height: 280px;'>
                     <div style='font-size: 3.5rem; margin-bottom: 15px;'>
@@ -1517,7 +1518,7 @@ else:
     if num_purchases >= 3:
         st.markdown(f"<h2 class='section-header'>📅 Your Shopping Journey</h2>", unsafe_allow_html=True)
         
-        st.markdown(f"<div class='color-card' style='border-color: {COLORS['lavender']};'>", unsafe_allow_html=True)
+        st.markdown(f"<div class='color-card' style='border-color: {COLORS['coral']};'>", unsafe_allow_html=True)
         
         df['Date'] = pd.to_datetime(df['Date'])
         df['Month'] = df['Date'].dt.to_period('M').astype(str)
@@ -1529,10 +1530,10 @@ else:
             y=monthly['Impact'],
             mode='lines+markers',
             name='CO₂ Impact',
-            line=dict(color=COLORS['coral'], width=4),
-            marker=dict(size=12, color=COLORS['terracotta'], line=dict(color='white', width=2)),
+            line=dict(color=COLORS['pink'], width=4),
+            marker=dict(size=12, color=COLORS['coral'], line=dict(color='white', width=2)),
             fill='tozeroy',
-            fillcolor=f"{COLORS['coral']}30"
+            fillcolor=f"{COLORS['pink']}30"
         ))
         
         fig3.update_layout(
@@ -1554,11 +1555,11 @@ else:
 
 st.markdown("<br><br>", unsafe_allow_html=True)
 st.markdown(f"""
-    <div style='background: linear-gradient(135deg, {COLORS['sage_green']}, {COLORS['teal']}, {COLORS['ocean']}); 
+    <div style='background: linear-gradient(135deg, {COLORS['deep_purple']}, {COLORS['royal_purple']}, {COLORS['ocean_blue']}, {COLORS['teal']}); 
                 padding: 50px 30px; border-radius: 30px; text-align: center; 
-                box-shadow: 0 20px 50px rgba(0,0,0,0.15);'>
+                box-shadow: 0 20px 50px rgba(107, 70, 193, 0.2);'>
         <div style='font-size: 4rem; margin-bottom: 20px;'>🌍💚🌿</div>
-        <h3 style='color: white; font-size: 2rem; margin: 0 0 15px 0; font-family: "Fredoka", cursive;'>
+        <h3 style='color: white; font-size: 2rem; margin: 0 0 15px 0; font-family: "Poppins", sans-serif; font-weight: 800;'>
             Every Choice Matters
         </h3>
         <p style='color: white; font-size: 1.2rem; opacity: 0.95; margin: 0 0 10px 0;'>
